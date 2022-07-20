@@ -1,6 +1,7 @@
-#include "../../include/c2ge/ecs.h"
+#include "c2ge/ecs.h"
+#include "c2ge/config.h"
+
 #include "../utils.h"
-#include "../config.h"
 
 #include <stdlib.h>
 
@@ -47,13 +48,14 @@ c2ge_Entity c2ge_createEntity(c2ge_World* world)
             newAllocated * sizeof(c2ge_entityGeneration_t));
         for(uint32_t i = world->entityGenerationAllocated; i < newAllocated; i++)
             world->entityGeneration[i] = 0;
+        world->entityGenerationAllocated = newAllocated;
     }
     entity.generation = world->entityGeneration[entity.index];
 
     return entity;
 }
 
-void c2ge_destroyEntity(c2ge_World* world, c2ge_Entity entity)
+void c2ge_deleteEntity(c2ge_World* world, c2ge_Entity entity)
 {
     if(!c2ge_entityExists(world, entity))
         return;

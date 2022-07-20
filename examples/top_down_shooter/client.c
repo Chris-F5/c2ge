@@ -25,11 +25,11 @@ int main()
     printEntity(c2ge_createEntity(world));
     printEntity(entity = c2ge_createEntity(world));
     printf("destroy %d\n", entity.index);
-    c2ge_destroyEntity(world, entity);
+    c2ge_deleteEntity(world, entity);
     printEntity(entity = c2ge_createEntity(world));
     printEntity(c2ge_createEntity(world));
     printf("destroy %d\n", entity.index);
-    c2ge_destroyEntity(world, entity);
+    c2ge_deleteEntity(world, entity);
     printEntity(c2ge_createEntity(world));
 
     c2ge_destroyWorld(world);

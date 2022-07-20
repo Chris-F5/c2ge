@@ -30,6 +30,6 @@ void c2ge_initWorld(c2ge_World* world);
 void c2ge_destroyWorld(c2ge_World* world);
 unsigned char c2ge_entityExists(const c2ge_World* world, c2ge_Entity entity);
 c2ge_Entity c2ge_createEntity(c2ge_World* world);
-void c2ge_destroyEntity(c2ge_World* world, c2ge_Entity entity);
+void c2ge_deleteEntity(c2ge_World* world, c2ge_Entity entity);
 
 #endif

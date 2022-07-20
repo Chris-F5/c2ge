@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(c2ge)
+set(CMAKE_BUILD_TYPE Debug)
 
+add_subdirectory(test)
 add_subdirectory(examples/top_down_shooter)
 
 add_library(c2ge STATIC
