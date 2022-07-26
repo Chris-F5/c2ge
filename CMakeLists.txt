@@ -17,4 +17,4 @@ target_include_directories(c2ge
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     )
 
-target_link_libraries(c2ge PUBLIC SDL2)
+target_link_libraries(c2ge PUBLIC SDL2 SDL2_image)
